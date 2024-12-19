@@ -1,14 +1,10 @@
 "use client"
-
 import { useUser } from '@clerk/nextjs'
-
 import React from 'react'
 
 
 const Hero = () => {
-  
   const { isLoaded, isSignedIn, user } = useUser()
-  
   if (!isLoaded || !isSignedIn) {
     return null
   }
